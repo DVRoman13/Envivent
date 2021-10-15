@@ -1,0 +1,31 @@
+@mixin fontStyle($fz, $lh, $color, $fontF, $ls) {
+  font-size: $fz;
+  line-height: $lh;
+  color: $color;
+  font-family: $fontF;
+  letter-spacing: $ls;
+}
+
+
+@mixin memberInfoName() {
+  @include fontStyle(40px, 36px, $white, $font, 0.7px);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: right;
+  @media screen and (max-width: $tablet) {
+    font-size: 25px;
+    line-height: 1;
+  }
+
+}
+
+@mixin memberInfoPosition() {
+  @include memberInfoName;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: initial;
+  @media screen and (max-width: $tablet) {
+    font-size: 16px;
+    line-height: 1;
+  }
+}
